@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrick's RPS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="content-wrap">
+      <nav class="navbar" id="navCont">
+        <img class="logoPR" src="images/finalPRLogo.png" alt="Initials PR" height="65px">
+        </a>
+      </nav>
+      <div class="announcementArea" style="padding-top: 35px;">
+        <span class="welcomeText">
+          <h2>Welcome</h2>
+          <h4>to Patrick's...</h4>
+          <hr style="margin-left: 15%; margin-right: 15%;">
+        </span>
+        <span class="roundUpdate" id="wonRound">
+          <h2 style="color: darkgreen;">Niiice, you won the round!</h2>
+          <hr style="margin-left: 15%; margin-right: 15%;">
+        </span>
+        <span class="roundUpdate" id="lostRound">
+          <h2 style="color: darkred;">You lost the round.</h2>
+          <hr style="margin-left: 15%; margin-right: 15%;">
+        </span>
+        <span class="roundUpdate" id="tiedRound">
+          <h2 style="color: darkgoldenrod;">Wait.. You tied???</h2>
+          <hr style="margin-left: 15%; margin-right: 15%;">
+        </span>
+        <span class="roundUpdate" id="youWin">
+          <h2 style=" font-size: 135px";>You win the game!</h2>
+        </span>
+        <span class="roundUpdate" id="youLose">
+          <h2 style=" font-size: 135px";>You lose the game.</h2>
+        </span>
+        <div class="scoreCont">
+          <div class="col-12" style="font-size: 30px; font-weight: 600;">Scoreboard
+            <hr style="margin: 0 auto; margin-bottom: 8px;">
+          </div>
+          <div style="display: flex;"><span class="col-5" style="text-align: left;">
+              <h3>You:</h3>
+            </span><span class="col-7">
+              <h3 id="playerScore">0</h3>
+            </span></div>
+          <div style="display: flex;"><span class="col-5" style="text-align: left;">
+              <h3>Computer:</h3>
+            </span><span class="col-7">
+              <h3 id="computerScore">0</h3>
+            </span></div>
+        </div>
+      </div>
+      <div class="directionsArea">
+        <span class="col directions" id="chooseHandDirections">Choose your hand!</span>
+        <span class="col directions" id="youChose">You picked...</span>
+        <span class="col directions" id="computerChose">The computer chose...</span>
+        <span class="col directions" id="handTie">Both you and the computer chose...</span>
+      </div>
+      <div class="selectionArea">
+        <div class="handChoose col handImg" id="playerRock">
+          <img src="images/rock.png" alt="Rock" height="235px" style="margin-top: 30px;">
+        </div>
+        <div class="handChoose col handImg" id="playerPaper">
+          <img src="images/paper.png" alt="Paper" height="260px">
+        </div>
+        <div class="handChoose col handImg" id="playerScissors">
+          <img src="images/scissors.png" alt="Scissors" height="265px">
+        </div>
+        <div class="handResult col" id="resultRock">
+          <img src="images/rock.png" alt="Rock" height="235px" style="margin-top: 30px;">
+        </div>
+        <div class="handResult col" id="resultPaper">
+          <img src="images/paper.png" alt="Paper" height="260px">
+        </div>
+        <div class="handResult col" id="resultScissors">
+          <img src="images/scissors.png" alt="Scissors" height="265px">
+        </div>
+        <div class="compHandChoose col" id="compRock">
+          <img src="images/rock.png" alt="Rock" height="235px" style="margin-top: 30px;">
+        </div>
+        <div class="compHandChoose col" id="compPaper">
+          <img src="images/paper.png" alt="Paper" height="260px">
+        </div>
+        <div class="compHandChoose col" id="compScissors">
+          <img src="images/scissors.png" alt="Scissors" height="265px">
+        </div>
+        <div class="resultGif col" id="knightThumbsUp">
+          <img src="images/knightThumbsUp.gif" alt="Gif of Knight giving thumbs up" height="265px">
+        </div>
+        <div class="resultGif col" id="sadStitch">
+          <img src="images/sadStich.gif" alt="Gif of Stich, from Lilo and Stitch, crying in the rain" height="265px">
+        </div>
+      </div>
+      <div class="computerArea">
+        <span id="computerChose">The computer chose...</span>
+        <button id="newRoundButton">Go to Next Round</button>
+        <button id="compPlayButton">Start</button>
+      </div>
+      <div class="compSelectionArea">
+
+      </div>
+      <footer><span id="spanFoot">
+          <i>
+            <h6>Created by Patrick Rallings for</h6>
+            <h5>CTAC of Carolina Fintech Hub</h5>
+          </i></span>
+        <a style="margin-right: 3%;" href="index.html"><img class="logoPR" src="images/finalPRLogo.png"
+            alt="Initials PR" height="45px"></a>
+        </a>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script type="text/JavaScript" src="rps.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+body {
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+h2 {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+#navCont {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  height: 100px;
+  border-bottom: 5px groove white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0%;
+  height: 300px;
+  width: 100%;
+  height: 75px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-top: 5px groove white;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#spanFoot {
+  margin-left: 40%;
+}
+
+.announcementArea {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.welcomeText {
+  display: none;
+}
+
+.handImg:hover {
+  cursor: pointer
+}
+
+.scoreCont {
+  display: block;
+  border: 3px double aliceblue;
+  border-radius: 25px;
+  width: 420px;
+  margin: 10px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: aliceblue;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.roundUpdate {
+  display: none;
+}
+
+.directionsArea {
+  display: flex;
+  padding: 30px;
+  height: 250px;
+}
+
+.directions {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.selectionArea {
+  height: 275px;
+  display: flex;
+}
+
+.handChoose {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+.handResult {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+#startButton {
+  display: none;
+}
+
+#chooseHandDirections {
+  display: flex;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#youChose {
+  display: none;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#playAgain {
+  display: none;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#handTie {
+  display: none;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.computerArea {
+  display: none;
+  justify-content: center;
+  padding: 50px 10px 15px 10px;
+  height: 150px;
+}
+
+#computerChose {
+  display: none;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.compSelectionArea {
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.compHandChoose {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+.resultGif {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+#compRock {
+  display: none;
+}
+
+#compPaper {
+  display: none;
+}
+
+#compScissors {
+  display: none;
+}
+
+#resultRock {
+  display: none;
+}
+
+#resultPaper {
+  display: none;
+}
+
+#resultScissors {
+  display: none;
+}
+
+#compPlayButton {
+  display: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  color: transparent;
+  height: 83px;
+  width: 420px;
+  background: none;
+  padding: 5px 150px;
+  font-size: 28px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 0.5s;
+  position: relative;
+}
+
+#newRoundButton {
+  display: flex;
+  border-radius: 15px;
+  border: 3px solid aliceblue;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  width: fit-content;
+  height: min-content;
+  padding: 10px 50px;
+  background: rgb(9, 9, 23);
+  font-size: 28px;
+  top: 0;
+  left: 100%;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+}
+
+#newRoundButton:hover {
+  transform: scale(1.1);
+  box-shadow: #e7f0fd;
+}
+
+#compPlayButton:before {
+  content: 'Shoot!';
+  display: flex;
+  border-radius: 15px;
+  border: 3px solid aliceblue;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background: rgb(9, 9, 23);
+  font-size: 28px;
+  top: 0;
+  left: 100%;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(0) rotatey(0);
+  opacity: 0;
+}
+
+#compPlayButton:hover:before {
+  transform: scale(1) rotatey(360deg);
+  left: 0;
+  opacity: 1;
+}
+
+#compPlayButton:after {
+  content: "Rock, Paper, Scissors,";
+  display: flex;
+  border-radius: 15px;
+  border: 3px solid aliceblue;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background: rgb(9, 9, 23);
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(1) rotatey(0);
+  opacity: 1;
+}
+
+#compPlayButton:hover:after {
+  transform: scale(0) rotatey(360deg);
+  left: -100%;
+  opacity: 0;
+}
+
+.logoPR:hover {
+  content: url(images/myBaldHead.png);
+}
+
+#playerRock:hover {
+  content: url(images/theRock.png);
+}
+
+#playerPaper:hover {
+  transform: scale(1.2);
+}
+
+#playerScissors:hover {
+  transform: scale(1.2);
+}
+#youWin {
+  background-color: #29cb37;
+  background-image: linear-gradient(45deg, #29cb37, #064f17);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+#youLose {
+  background-color: #d36060;
+  background-image: linear-gradient(45deg, #d36060, #460404);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
