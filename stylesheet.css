@@ -301,18 +301,8 @@ footer {
   transform: scale(1.2);
 }
 #youWin {
-  background-color: #29cb37;
-  background-image: linear-gradient(45deg, #29cb37, #064f17);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
+  color: green;
 }
 #youLose {
-  background-color: #d36060;
-  background-image: linear-gradient(45deg, #d36060, #460404);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
+  color: darkred;
 }
