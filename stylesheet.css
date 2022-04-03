@@ -43,9 +43,9 @@ footer {
 .announcementArea {
   display: flex;
   justify-content: center;
-  height: 200px;
+  height: 22.2%;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 2.2%;
 }
 
 .welcomeText {
@@ -74,14 +74,14 @@ footer {
 
 .directionsArea {
   display: flex;
-  padding: 30px;
-  height: 250px;
+  padding-bottom: 2.5%;
+  /* height: 15%; */
 }
 
 .directions {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .selectionArea {
