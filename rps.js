@@ -100,8 +100,7 @@ const playerChoseLayout = () => {
   document.querySelector("#youChose").style.display = "flex";
 };
 
-// welcomeLayout();
-resetRoundLayout()
+welcomeLayout();
 
 function getHand() {
   return parseInt(Math.random() * 10) % 3;
