@@ -8,17 +8,41 @@ const newRoundButton = document.querySelector("#newRoundButton");
 let player1WinCount = 0;
 let player2WinCount = 0;
 
+const displayFlex = (...args) => {
+  for(let i = 0; i < [...args].length; i++){
+    console.log([...args][i])
+    document.querySelector([...args][i]).style.display = "flex";
+  }
+}
+
+const displayBlock = (...args) => {
+  for(let i = 0; i < [...args].length; i++){
+    console.log([...args][i])
+    document.querySelector([...args][i]).style.display = "block";
+  }
+}
+
+const displayNone = (...args) => {
+  for(let i = 0; i < [...args].length; i++){
+    console.log([...args][i])
+    document.querySelector([...args][i]).style.display = "none";
+  }
+}
+
 const compRock = () => {
-  document.querySelector("#compRock").style.display = "flex";
-  document.querySelector("#computerChose").style.display = "flex";
+  displayFlex('#compRock', '#computerChose')
+  // document.querySelector("#compRock").style.display = "flex";
+  // document.querySelector("#computerChose").style.display = "flex";
 };
 const compPaper = () => {
-  document.querySelector("#compPaper").style.display = "flex";
-  document.querySelector("#computerChose").style.display = "flex";
+  displayFlex('#compPaper', '#computerChose')
+  // document.querySelector("#compPaper").style.display = "flex";
+  // document.querySelector("#computerChose").style.display = "flex";
 };
 const compScissors = () => {
-  document.querySelector("#compScissors").style.display = "flex";
-  document.querySelector("#computerChose").style.display = "flex";
+  displayFlex('#compScissors', '#computerChose')
+  // document.querySelector("#compScissors").style.display = "flex";
+  // document.querySelector("#computerChose").style.display = "flex";
 };
 
 const playerHandsVisible = () => {
@@ -27,48 +51,57 @@ const playerHandsVisible = () => {
   playerScissors.style.display = "flex";
 };
 const compHandsHidden = () => {
-  document.querySelector("#compRock").style.display = "none";
-  document.querySelector("#compPaper").style.display = "none";
-  document.querySelector("#compScissors").style.display = "none";
+  displayNone("#compRock", "#compPaper", "#compScissors")
+  // document.querySelector("#compRock").style.display = "none";
+  // document.querySelector("#compPaper").style.display = "none";
+  // document.querySelector("#compScissors").style.display = "none";
 };
 const playerHandsHidden = () => {
-  document.querySelector("#playerRock").style.display = "none";
-  document.querySelector("#playerPaper").style.display = "none";
-  document.querySelector("#playerScissors").style.display = "none";
+  displayNone("#playerRock", "#playerPaper", "#playerScissors")
+  // document.querySelector("#playerRock").style.display = "none";
+  // document.querySelector("#playerPaper").style.display = "none";
+  // document.querySelector("#playerScissors").style.display = "none";
 };
 const resultHandsHidden = () => {
-  document.querySelector("#resultRock").style.display = "none";
-  document.querySelector("#resultPaper").style.display = "none";
-  document.querySelector("#resultScissors").style.display = "none";
+  displayNone("#resultRock", "#resultPaper", "#resultScissors")
+  // document.querySelector("#resultRock").style.display = "none";
+  // document.querySelector("#resultPaper").style.display = "none";
+  // document.querySelector("#resultScissors").style.display = "none";
 };
 const welcomeLayout = () => {
-  document.querySelector("#compPlayButton").style.display = "block";
-  document.querySelector(".welcomeText").style.display = "block";
-  document.querySelector(".directionsArea").style.display = "none";
-  document.querySelector(".selectionArea").style.display = "none";
-  document.querySelector(".computerArea").style.display = "flex";
-  document.querySelector(".scoreCont").style.display = "none";
-  document.querySelector("#newRoundButton").style.display = "none";
+  displayBlock('#compPlayButton', '.welcomeText')
+  displayFlex(".computerArea")
+  displayNone(".directionsArea", ".selectionArea", ".scoreCont", "#newRoundButton")
+  // document.querySelector("#compPlayButton").style.display = "block";
+  // document.querySelector(".welcomeText").style.display = "block";
+  // document.querySelector(".directionsArea").style.display = "none";
+  // document.querySelector(".selectionArea").style.display = "none";
+  // document.querySelector(".computerArea").style.display = "flex";
+  // document.querySelector(".scoreCont").style.display = "none";
+  // document.querySelector("#newRoundButton").style.display = "none";
 };
 const resetRoundLayout = () => {
-  document.querySelector("#chooseHandDirections").style.display = "flex";
-  document.querySelector(".directionsArea").style.display = "flex";
-  document.querySelector(".selectionArea").style.display = "flex";
-  document.querySelector(".computerArea").style.display = "flex";
-  document.querySelector("#computerChose").style.display = "none";
-  document.querySelector("#youChose").style.display = "none";
-  document.querySelector("#handTie").style.display = "none";
-  document.querySelector(".scoreCont").style.display = "block";
-  document.querySelector(".welcomeText").style.display = "none";
-  document.querySelector("#compPlayButton").style.display = "none";
-  document.querySelector("#newRoundButton").style.display = "none";
-  document.querySelector("#wonRound").style.display = "none";
-  document.querySelector("#lostRound").style.display = "none";
-  document.querySelector("#tiedRound").style.display = "none";
-  document.querySelector("#youWin").style.display = "none";
-  document.querySelector("#youLose").style.display = "none";
-  document.querySelector("#knightThumbsUp").style.display = "none";
-  document.querySelector("#sadStitch").style.display = "none";
+  displayBlock('.scoreCont')
+  displayFlex('#chooseHandDirections', '.directionsArea', '.selectionArea', '.computerArea')
+  displayNone("#computerChose", ".welcomeText", "#youChose", "#handTie", "#compPlayButton", "#newRoundButton", "#wonRound", "#lostRound", "#tiedRound", "#youWin", "#youLose", "#knightThumbsUp", "#sadStitch")
+  // document.querySelector("#chooseHandDirections").style.display = "flex";
+  // document.querySelector(".directionsArea").style.display = "flex";
+  // document.querySelector(".selectionArea").style.display = "flex";
+  // document.querySelector(".computerArea").style.display = "flex";
+  // document.querySelector("#computerChose").style.display = "none";
+  // document.querySelector("#youChose").style.display = "none";
+  // document.querySelector("#handTie").style.display = "none";
+  // document.querySelector(".scoreCont").style.display = "block";
+  // document.querySelector(".welcomeText").style.display = "none";
+  // document.querySelector("#compPlayButton").style.display = "none";
+  // document.querySelector("#newRoundButton").style.display = "none";
+  // document.querySelector("#wonRound").style.display = "none";
+  // document.querySelector("#lostRound").style.display = "none";
+  // document.querySelector("#tiedRound").style.display = "none";
+  // document.querySelector("#youWin").style.display = "none";
+  // document.querySelector("#youLose").style.display = "none";
+  // document.querySelector("#knightThumbsUp").style.display = "none";
+  // document.querySelector("#sadStitch").style.display = "none";
   playerRock.style.display = "flex";
   playerPaper.style.display = "flex";
   playerScissors.style.display = "flex";
@@ -77,27 +110,35 @@ const resetRoundLayout = () => {
 };
 
 const wonRound = () => {
-  document.querySelector(".scoreCont").style.display = "none";
-  document.querySelector("#wonRound").style.display = "block";
-  document.querySelector(".welcomeText").style.display = "none";
-  document.querySelector("#newRoundButton").style.display = "block";
+  displayBlock("#wonRound", "#newRoundButton")
+  displayNone(".scoreCont", ".welcomeText")
+  // document.querySelector(".scoreCont").style.display = "none";
+  // document.querySelector("#wonRound").style.display = "block";
+  // document.querySelector(".welcomeText").style.display = "none";
+  // document.querySelector("#newRoundButton").style.display = "block";
 };
 const lostRound = () => {
-  document.querySelector(".scoreCont").style.display = "none";
-  document.querySelector("#lostRound").style.display = "block";
-  document.querySelector(".welcomeText").style.display = "none";
-  document.querySelector("#newRoundButton").style.display = "block";
+  displayBlock("#lostRound", "#newRoundButton")
+  displayNone(".scoreCont", ".welcomeText")
+  // document.querySelector(".scoreCont").style.display = "none";
+  // document.querySelector("#lostRound").style.display = "block";
+  // document.querySelector(".welcomeText").style.display = "none";
+  // document.querySelector("#newRoundButton").style.display = "block";
 };
 const tiedRound = () => {
-  document.querySelector(".scoreCont").style.display = "none";
-  document.querySelector("#tiedRound").style.display = "block";
-  document.querySelector(".welcomeText").style.display = "none";
-  document.querySelector("#newRoundButton").style.display = "block";
+  displayBlock("#tiedRound", "#newRoundButton")
+  displayNone(".scoreCont", ".welcomeText")
+  // document.querySelector(".scoreCont").style.display = "none";
+  // document.querySelector("#tiedRound").style.display = "block";
+  // document.querySelector(".welcomeText").style.display = "none";
+  // document.querySelector("#newRoundButton").style.display = "block";
 };
 const wonGameLayout = () => {};
 const playerChoseLayout = () => {
-  document.querySelector("#chooseHandDirections").style.display = "none";
-  document.querySelector("#youChose").style.display = "flex";
+  displayNone("#chooseHandDirections")
+  displayFlex("#youChose")
+  // document.querySelector("#chooseHandDirections").style.display = "none";
+  // document.querySelector("#youChose").style.display = "flex";
 };
 
 welcomeLayout();
@@ -296,18 +337,19 @@ function playGame(player1, player2) {
 
 newRoundButton.addEventListener("click", function () {
   if (player1WinCount === 5) {
+    displayNone(".directionsArea", "#newRoundButton", "#chooseHandDirections", "#youChose", "#computerChose", "#handTie", "#wonRound", "#lostRound", "#tiedRound")
     document.querySelector("#youWin").style.display = "block";
     document.querySelector("#compPlayButton").style.display = "block";
     document.querySelector("#knightThumbsUp").style.display = "flex";
-    document.querySelector(".directionsArea").style.display = "none";
-    document.querySelector("#newRoundButton").style.display = "none";
-    document.querySelector("#chooseHandDirections").style.display = "none";
-    document.querySelector("#youChose").style.display = "none";
-    document.querySelector("#computerChose").style.display = "none";
-    document.querySelector("#handTie").style.display = "none";
-    document.querySelector("#wonRound").style.display = "none";
-    document.querySelector("#lostRound").style.display = "none";
-    document.querySelector("#tiedRound").style.display = "none";
+    // document.querySelector(".directionsArea").style.display = "none";
+    // document.querySelector("#newRoundButton").style.display = "none";
+    // document.querySelector("#chooseHandDirections").style.display = "none";
+    // document.querySelector("#youChose").style.display = "none";
+    // document.querySelector("#computerChose").style.display = "none";
+    // document.querySelector("#handTie").style.display = "none";
+    // document.querySelector("#wonRound").style.display = "none";
+    // document.querySelector("#lostRound").style.display = "none";
+    // document.querySelector("#tiedRound").style.display = "none";
     compHandsHidden();
     playerHandsHidden();
     resultHandsHidden()
@@ -316,18 +358,19 @@ newRoundButton.addEventListener("click", function () {
     document.getElementById("playerScore").innerHTML = player1WinCount;
     document.getElementById("computerScore").innerHTML = player2WinCount;
   } else if (player2WinCount === 5) {
+    displayNone(".directionsArea", "#newRoundButton", "#chooseHandDirections", "#youChose", "#computerChose", "#handTie", "#wonRound", "#lostRound", "#tiedRound")
     document.querySelector("#youLose").style.display = "block";
     document.querySelector("#compPlayButton").style.display = "block";
     document.querySelector("#sadStitch").style.display = "flex";
-    document.querySelector(".directionsArea").style.display = "none";
-    document.querySelector("#newRoundButton").style.display = "none";
-    document.querySelector("#chooseHandDirections").style.display = "none";
-    document.querySelector("#youChose").style.display = "none";
-    document.querySelector("#computerChose").style.display = "none";
-    document.querySelector("#handTie").style.display = "none";
-    document.querySelector("#wonRound").style.display = "none";
-    document.querySelector("#lostRound").style.display = "none";
-    document.querySelector("#tiedRound").style.display = "none";
+    // document.querySelector(".directionsArea").style.display = "none";
+    // document.querySelector("#newRoundButton").style.display = "none";
+    // document.querySelector("#chooseHandDirections").style.display = "none";
+    // document.querySelector("#youChose").style.display = "none";
+    // document.querySelector("#computerChose").style.display = "none";
+    // document.querySelector("#handTie").style.display = "none";
+    // document.querySelector("#wonRound").style.display = "none";
+    // document.querySelector("#lostRound").style.display = "none";
+    // document.querySelector("#tiedRound").style.display = "none";
     compHandsHidden();
     playerHandsHidden();
     resultHandsHidden()
